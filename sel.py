@@ -138,7 +138,7 @@ def login(email, password,root):
     except:
         # If the user doesn't exist, an exception is raised
 
-        text = f'User with email {email} does not exist.'  
+        text = f'User with email {email} does not exist.You wanna register?'  
         if messagebox.askyesno(title='User not found', message=text):
             create_user(email, password)
             root.destroy()
@@ -173,7 +173,7 @@ def login_window():
 
 
 
-cred = credentials.Certificate('/Users/affankhalid/Desktop/credentials.json')
+cred = credentials.Certificate('credentials.json')
 initialize_app(cred)
 
 
